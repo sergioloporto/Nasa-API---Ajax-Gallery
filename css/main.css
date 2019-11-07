@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    background: white;
+    color: #1a1a1a;
+}
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+}
+h1, small {
+
+    text-align: center;
+}
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transition: 600ms ease;
+    -o-transition: 600ms ease;
+    transition: 600ms ease;
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+}
+.imagecontainer:hover .image {
+    background-color: white;
+    -webkit-filter: brightness(1) contrast(120% );
+    filter: brightness(1) contrast(120% );
+    position: relative;
+    z-index: 0;
+}
+.imagecontainer {
+    position: relative;
+}
+.imagecontainer:before {
+    opacity: 0;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    -webkit-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+}
+.imagecontainer:hover:before {
+    opacity: 1;
+}
+.gallery {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-flow: dense;
+    z-index: -5;
+}
+.gallery:hover {
+    z-index: -5;
+}
+.gallery > a:nth-child(2n) {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+    -ms-grid-row-span: 2;
+    grid-row: span 2;
+}
+.gallery > a:nth-child(4n) {
+    -ms-grid-column-span: 15;
+    grid-column: span 1.5;
+    -ms-grid-row-span: 15;
+    grid-row: span 1.5;
+}
+.gallery > a:nth-child(8n) {
+    -ms-grid-column-span: 15;
+    grid-column: span 1.5;
+    -ms-grid-row-span: 15;
+    grid-row: span 1.5;
+}
+.gallery > a:nth-child(10n) {
+    -ms-grid-column-span: 12;
+    grid-column: span 1.2;
+    -ms-grid-row-span: 12;
+    grid-row: span 1.2;
+}
+.gallery > a:nth-child(12n) {
+    -ms-grid-column-span: 16;
+    grid-column: span 1.6;
+    -ms-grid-row-span: 16;
+    grid-row: span 1.6;
+}
+/*body {*/
+/*    margin: 0;*/
+/*    background: white;*/
+/*    color: #1a1a1a;*/
+/*}*/
+/*header {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-self: center;*/
+/*    flex-direction: column;*/
+/*    text-align: center;*/
+/*}*/
+/*h1, small {*/
+
+/*    text-align: center;*/
+/*}*/
+/*.image {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*    transition: 600ms ease;*/
+/*    filter: brightness(0.5);*/
+/*}*/
+/*.imagecontainer:hover .image {*/
+/*    background-color: white;*/
+/*    filter: brightness(1) contrast(120% );*/
+/*    position: relative;*/
+/*    z-index: 0;*/
+/*}*/
+/*.imagecontainer {*/
+/*    position: relative;*/
+/*}*/
+/*.imagecontainer:before {*/
+/*    opacity: 0;*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.5);*/
+/*    z-index: 1;*/
+/*    transition: 1s ease;*/
+/*}*/
+/*.imagecontainer:hover:before {*/
+/*opacity: 1;*/
+/*}*/
+/*.gallery {*/
+/*    display: grid;*/
+/*    grid-gap: 10px;*/
+/*    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+/*    grid-auto-flow: dense;*/
+/*    z-index: -5;*/
+/*}*/
+/*.gallery:hover {*/
+/*    z-index: -5;*/
+/*}*/
+/*.gallery > a:nth-child(2n) {*/
+/*    grid-column: span 2;*/
+/*    grid-row: span 2;*/
+/*}*/
+/*.gallery > a:nth-child(4n) {*/
+/*    grid-column: span 1.5;*/
+/*    grid-row: span 1.5;*/
+/*}*/
+/*.gallery > a:nth-child(8n) {*/
+/*    grid-column: span 1.5;*/
+/*    grid-row: span 1.5;*/
+/*}*/
+/*.gallery > a:nth-child(10n) {*/
+/*    grid-column: span 1.2;*/
+/*    grid-row: span 1.2;*/
+/*}*/
+/*.gallery > a:nth-child(12n) {*/
+/*    grid-column: span 1.6;*/
+/*    grid-row: span 1.6;*/
+/*}*/
