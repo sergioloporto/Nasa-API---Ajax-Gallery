@@ -13,7 +13,6 @@ $(function () {
                 page: 1
             }
         }).done(function (response) {
-            console.log(response.photos);
             insertImages(response.photos);
         })
     }
@@ -32,5 +31,26 @@ $(function () {
             `);
             $gallery.append($newLi)
         });
-    }
+    };
+
+
+
+    $(window).scroll(function(el) {
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 500) {
+
+            console.log("aaaaaaaaa")
+
+            // loadImages(0);
+
+
+
+
+        /* You can improve this code with following lines in ajax call:
+        new_element.hide().appendTo('.your_div').fadeIn(); $(window).scrollTop($(window).scrollTop()-1);
+        First line appends elements in nice way, second assures that your function never stops at the bottom of the page. */
+
+        }
+    });
+
+
 });
