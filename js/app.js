@@ -2,6 +2,7 @@ $(function () {
     const key = "XZcghvRmHEXkbzbDf8QQxkocgmBGo5ndYeLKTIpR";
     const address = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos/";
     const $gallery = $(".gallery");
+    let isLoaded = false;
 
     function loadImages(sols) {
         $.ajax({
@@ -14,8 +15,10 @@ $(function () {
             }
         }).done(function (response) {
             insertImages(response.photos);
+            isLoaded = true;
         })
     }
+
 
     loadImages(2050);
     loadImages(2051);
@@ -30,19 +33,22 @@ $(function () {
                    </a>
             `);
             $gallery.append($newLi)
+
+
         });
     };
-
 
 
     $(window).scroll(function(el) {
         if($(window).scrollTop() + $(window).height() > $(document).height() - 500) {
 
+            if (isLoaded === true) {
+
             console.log("aaaaaaaaa")
 
             // loadImages(0);
 
-
+            }
 
 
         /* You can improve this code with following lines in ajax call:
